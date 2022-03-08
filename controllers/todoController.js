@@ -6,7 +6,7 @@ module.exports = {
       res.render('index');
     } catch (err) {
       console.log(err);
-      return errorHandler.errorPage
+      return errorHandler.errorPage;
     }
   },
 
@@ -15,7 +15,7 @@ module.exports = {
       res.render('todo');
     } catch (err) {
       console.log(err);
-      return errorHandler.errorPage
+      return errorHandler.errorPage;
     }
   },
 }

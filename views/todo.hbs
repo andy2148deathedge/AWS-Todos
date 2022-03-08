@@ -5,10 +5,10 @@
         <input type="checkbox" name="isDone" {{#if todo.isDone }} checked {{/if}} disabled>
       </div>
     </div>
-    <input class="form-control" type="text" placeholder="name" name="name" value="{{ todo.name }}" disabled>
+    <input class="form-control" type="text" placeholder="what to do?" name="name" value="{{ todo.name }}" disabled>
     <div class="input-group-append">
-      <a class="btn btn-success" href="/todos/{{ todo.id }}/edit">edit</a>
-      <button class="btn btn-danger" type="submit">delete</button>
+      <button class="btn btn-success" href="/todos/{{ todo.id }}/edit">edit</button>
+      <button class="btn btn-dark" type="submit">clear</button>
     </div>
   </div>
 </form>

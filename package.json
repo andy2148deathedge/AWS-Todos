@@ -1,0 +1,27 @@
+{
+  "name": "aws-todos",
+  "version": "1.0.0",
+  "description": "A simple todo app source code for AWS  cloud service .",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andy2148deathedge/AWS-Todos.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andy2148deathedge/AWS-Todos/issues"
+  },
+  "homepage": "https://github.com/andy2148deathedge/AWS-Todos#readme",
+  "dependencies": {
+    "express": "^4.17.3",
+    "express-handlebars": "^6.0.3",
+    "nodemon": "^2.0.15"
+  }
+}

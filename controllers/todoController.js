@@ -1,6 +1,5 @@
 const errorHandler = require('../repositories/error');
 const db = require('../models');
-const { sequelize } = db
 const { Todo } = db;  
 
 module.exports = {
@@ -13,16 +12,18 @@ module.exports = {
       return res.render('index', { todos });
     } catch (err) {
       console.log(err);
-      return errorHandler.errorPage;
     }
   },
 
   todo: async (req, res) => {
     try {// show single todo page
-      res.render('todo');
+      const todoId = req.params.id;
+      const todo = await Todo.findByPk(todoId);
+      return res.render('todo', { todo: todo.toJSON() });
     } catch (err) {
       console.log(err);
-      return errorHandler.errorPage;
     }
   },
+
+  
 }

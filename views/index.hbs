@@ -7,7 +7,9 @@
         <input style="vertical-align: middle;" type="checkbox" name="isDone" {{#if this.isDone }} checked {{/if}}
           disabled>
         <h4 style="display: inline; vertical-align: middle;">
-          {{ this.name }}
+          {{#if this.isDone }} <del> {{/if}}
+            {{ this.name }}
+          {{#if this.isDone }} </del> {{/if}}
         </h4>
       </div>
       <div class="col-auto">

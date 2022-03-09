@@ -55,12 +55,16 @@ module.exports = {
   },
 
   edit: async (req, res) => {
-    try {// edit page
+    try {// edit feature
       const todoId = req.params.id;
+      
+      // edit Todo data
       const todo = await Todo.findByPk(todoId);
+      todo.isDone = (req.body.isDone) ? true : false;
       todo.name = req.body.name;
       await todo.save();
-      return res.redirect(`/todos/${todoId}/edit`);
+
+      return res.redirect('/');
     } catch (err) {
       console.log(err);
     }

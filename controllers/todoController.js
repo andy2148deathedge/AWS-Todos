@@ -25,5 +25,22 @@ module.exports = {
     }
   },
 
-  
+  newPage: async (req, res) => {
+    try {// show create todo page
+      return res.render('new');
+    } catch (err) {
+      console.log(err);
+    }
+  },
+
+  new: async (req, res) => {
+    try {// create todo and back to index
+      await Todo.create({
+        name: req.body.name,
+      });
+      return res.redirect('/');
+    } catch (err) {
+      console.log(err);
+    }
+  }
 }

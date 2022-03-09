@@ -1,9 +1,16 @@
-const errorHandler = require('../repositories/error')
+const errorHandler = require('../repositories/error');
+const db = require('../models');
+const { sequelize } = db
+const { Todo } = db;  
 
 module.exports = {
   todos: async (req, res) => {
     try {// show index todos
-      res.render('index');
+      const todos = await Todo.findAll({
+        raw: true,
+        nest: true
+      });
+      return res.render('index', { todos });
     } catch (err) {
       console.log(err);
       return errorHandler.errorPage;

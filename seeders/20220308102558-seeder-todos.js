@@ -5,9 +5,9 @@ module.exports = {
     let nameItem = ['吃飯', '看電視', '洗澡', '刷牙', '睡覺'];
     
     await queryInterface.bulkInsert('Todos', 
-      nameItem.map((e) => ({
+      nameItem.map((e, i) => ({
         name: `${e}`,
-        isDone: false,
+        isDone: (i === 0) ? true : false,
         createdAt: new Date(),
         updatedAt: new Date() 
       })) , {});

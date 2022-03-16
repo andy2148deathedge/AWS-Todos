@@ -3,7 +3,7 @@
     "username": "root",
     "password": "password",
     "database": "todo_aws",
-    "host": "127.0.0.1",
+    "host": "mysqldev.c3vagdhp4uqi.us-west-2.rds.amazonaws.com",
     "dialect": "mysql"
   },
   "test": {

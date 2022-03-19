@@ -1,8 +1,8 @@
 # AWS-Todos
 這是一個簡單的架構於AWS上的 Node.js web 應用。為了學習並熟悉 AWS 的各項服務，我決定用一個簡單的常見 todo list 專案來作為串連起各項 AWS 常見主要服務的總練習。雖然看起來只是一個簡單的網站，卻是運用了 AWS 各項資源所搭建起的一個典型雲端web應用。
 
-![AWS Todos pic]()
-![AWS Todos error]()
+![AWS Todos pic](https://github.com/andy2148deathedge/AWS-Todos/blob/main/github_public/AWS%20Todos%20pic.png)
+![AWS Todos error](https://github.com/andy2148deathedge/AWS-Todos/blob/main/github_public/AWS%20Todos%20error.png)
 
 ## 網站連結:
 [AWS Todos Link](http://54.244.68.189/)
@@ -19,7 +19,7 @@
 
 這邊是網站架構圖:
 
-![5. 完整架構圖.png]()
+![5. 完整架構圖.png](https://github.com/andy2148deathedge/AWS-Todos/blob/main/github_public/AWS%20Todos%20%E6%9E%B6%E6%A7%8B.png)
 
 - **VPC (Virtual Private Cloud)** 內含有公有網路(**Public subnet**)，跟私有網路(**Private subnet**)，私有網絡只能跟 VPC 內的網絡進行流通，公有網絡則是可以透過 **IGW** (Internet gateway)讓來自網際網路的使用者進行訪問。
 - 搭建在公有網絡上的虛擬機器實例 **EC2** 裡面部屬著 **Node.js web 應用**，並且透過 VPC 內的 **RTB (route table)** 可以訪問到私有網路內的 **RDS** 資料庫
